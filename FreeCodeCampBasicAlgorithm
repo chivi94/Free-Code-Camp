@@ -18,3 +18,10 @@ function palindrome(str) {
   var reverseStr = lowRegStr.split('').reverse().join(''); 
   return reverseStr === lowRegStr;
 }
+
+function findLongestWord(str) {
+  var longest= str.split(' ').sort(function(a,b){
+    return a.length - b.length;
+  });
+  return longest[longest.length -1].length;
+}
